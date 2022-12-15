@@ -1,0 +1,19 @@
+.content {
+  margin-top: 100px;
+  margin-left: 50px;
+  h2 {
+    text-align: center;
+  }
+}
+table {
+  width: 100%;
+}
+
+.overTable {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.mat-elevation-z8 {
+  margin-top: 10px;
+}

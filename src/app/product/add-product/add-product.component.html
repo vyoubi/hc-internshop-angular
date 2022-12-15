@@ -1,0 +1,40 @@
+<div class="content">
+  <h1 mat-dialog-title>Neues Produkt</h1>
+  <div mat-dialog-content>
+    <form [formGroup]="productForm">
+      <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput maxlength="200" formControlName="name">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Beschreibung</mat-label>
+        <textarea matInput [maxLength]="4000" formControlName="description"></textarea>
+      </mat-form-field>
+      <mat-form-field appearance="fill" floatLabel="always">
+        <mat-label>Preis</mat-label>
+        <input matInput type="number" class="example-right-align" placeholder="0" formControlName="price">
+        <span matPrefix>€&nbsp;</span>
+        <span matSuffix>.00</span>
+      </mat-form-field>
+    </form>
+  </div>
+
+  <div>
+    <form enctype="multipart/form-data" [formGroup]="fileForm" fxLayoutGap="30px" action="/">
+      <fieldset>
+        <div class="form-group">
+          <div>
+            <input type="file" (change)="selectFile($event)" accept="*/*" class="form-control" name="profile" />
+          </div>
+        </div>
+      </fieldset>
+    </form>
+    <div style="margin-top: 15px;">
+      <img [src]="fileSource"  alt=""/>
+    </div>
+  </div>
+  <div mat-dialog-actions [align]="'end'">
+    <button mat-raised-button color="warn" mat-dialog-close>Abbrechen</button>
+    <button mat-raised-button color="primary" style="margin-left: 8px;" [disabled]="productForm.invalid" name ="action" (click)="addProduct()">{{actionBtn}}</button>
+  </div>
+</div>

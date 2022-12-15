@@ -1,0 +1,21 @@
+<h1 mat-dialog-title>Inventar</h1>
+<div mat-dialog-content>
+  <form [formGroup]="inventoryForm">
+    <mat-form-field appearance="fill">
+      <mat-label>PRODUKT</mat-label>
+      <mat-select formControlName="skuCode">
+        <mat-option *ngFor="let prod of products" [value]="prod.name">
+          {{prod.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Im stock</mat-label>
+      <input matInput formControlName="stock">
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions [align]="'end'">
+  <button mat-raised-button color="warn" mat-dialog-close>Abbrechen</button>
+  <button mat-raised-button color="primary" style="margin-left: 8px;" [disabled]="inventoryForm.invalid" name ="action" (click)="addInventory()">{{actionBtn}}</button>
+</div>

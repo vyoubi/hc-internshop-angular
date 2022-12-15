@@ -1,0 +1,52 @@
+.logo-text {
+  text-transform: uppercase;
+  color: white;
+  font-family: "Teko SemiBold", serif;
+  font-size: 35px;
+  text-align: center;
+}
+.logo {
+  text-align: center;
+  padding: 2.6rem 1rem;
+}
+.mat-icon {
+  vertical-align: center;
+  margin-right: 1rem;
+}
+.mat-divider {
+  border-top-width: 2px;
+  border-color: white;
+}
+.mat-list-item {
+  font-size: 0.8rem;
+  height: 44px !important;
+  margin-bottom: 4px;
+  ::ng-deep {
+    .mat-list-item-content {
+      border-radius: 5px;
+      margin: 0 8px;
+      &:hover {
+        background-color: #ffffff;
+      }
+    }
+  }
+}
+.list-item-active {
+  ::ng-deep {
+    .mat-list-item-content {
+      background: #ffffff;
+      &:hover {
+        background-color: #ffffff;
+      }
+    }
+  }
+}
+
+.mat-subheader {
+  color: #f2f5f7;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+

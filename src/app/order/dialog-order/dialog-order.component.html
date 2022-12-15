@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>Anzahl eingeben</h1>
+<div mat-dialog-content>
+  <form [formGroup]="orderForm">
+    <mat-form-field appearance="fill" floatLabel="always">
+<!--      <mat-label>Price</mat-label>-->
+      <input matInput type="number" class="example-right-align" placeholder="0" formControlName="quantity">
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions [align]="'end'">
+  <button mat-raised-button color="warn" mat-dialog-close>Abbrechen</button>
+  <button mat-raised-button color="primary" style="margin-left: 8px;" [disabled]="orderForm.invalid" name ="action" (click)="addOrder()">Bestätigen</button>
+</div>

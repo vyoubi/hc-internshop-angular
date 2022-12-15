@@ -1,0 +1,7 @@
+<div class="content">
+  <div fxLayout="row wrap" fxLayoutGap="16px grid">
+    <div fxFlex="33%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let prod of products">
+      <app-product [product]="prod" (selectProduct)="product"></app-product>
+    </div>
+  </div>
+</div>

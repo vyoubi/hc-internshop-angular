@@ -1,0 +1,30 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+    <button mat-icon-button class="menu-button" (click)="toggleSidebar()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <button mat-raised-button class="menu-button" routerLink="/add-product">
+      Produkt hinzufügen
+    </button>
+    <div class="profile-block">
+      <ul>
+        <li>
+          <button mat-button [matMenuTriggerFor]="menu" class="user">
+            <img
+              src="assets/profile/close-up-profile-of-a-black-jackdaw-corvus-monedu-2021-11-03-05-19-41-utc.jpg" alt="profile"
+              class="user-image"
+            />
+            Benutzername
+            <mat-icon class="user-image-icon">keyboard_arrow_down</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+              <mat-icon>exit_to_app</mat-icon>
+              Logout
+            </button>
+          </mat-menu>
+        </li>
+      </ul>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

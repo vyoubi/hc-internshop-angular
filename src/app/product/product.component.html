@@ -1,0 +1,15 @@
+<mat-card class="mat-elevation-z4" >
+  <mat-card-header>
+    <mat-card-title>{{ product.name }}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image [src]= product.productImageUrl [alt]="product.name">
+  <mat-card-content>
+    <p>
+      {{ product.description }}
+    </p>
+  </mat-card-content>
+  <mat-card-actions class="foo">
+    <p>PREIS: {{ product.price }} €</p>
+    <button mat-button (click)="goToWarenkorb(product)"><mat-icon>add_shopping_cart</mat-icon></button>
+  </mat-card-actions>
+</mat-card>
