@@ -13,13 +13,11 @@ pipeline {
             steps{
 
              sh 'npm install'
+             sh 'npm install @angular/cli -g'
             }
         }
          stage('Project Build prod') {
            steps {
-             sh 'nvm install 12.20'
-             sh 'nvm use 12.20'
-             sh 'npm install @angular/cli -g'
              sh 'npm run build:prod'
            }
         }
