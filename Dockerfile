@@ -15,7 +15,7 @@ RUN npm run build:prod
 
 FROM nginx:1.21.6-alpine
 
-COPY --from=build-step /app/dist/timet-web /usr/share/nginx/html
+COPY --from=build-step /app/dist/visual_from_demo /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/nginx.conf
 
 EXPOSE 80
