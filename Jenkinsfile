@@ -1,5 +1,8 @@
 pipeline {
   agent any
+  tools{
+       nodejs 'nodejs-14-18-1'
+   }
    environment {
     DOCKER_TAG = "${BUILD_NUMBER}"
    }
@@ -13,7 +16,6 @@ pipeline {
             steps{
 
              sh 'npm install'
-             sh 'npm install @angular/cli -g'
             }
         }
          stage('Project Build prod') {
