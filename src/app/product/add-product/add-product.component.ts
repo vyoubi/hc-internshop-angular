@@ -62,7 +62,7 @@ export class AddProductComponent implements OnInit {
             error:(err) => {
               console.log(err);
               this._snackBar.open('Produkt erfolgreich hinzugefügt', 'Danke!');
-              this.router.navigate(['/shop']);
+              this.router.navigate(['/products']);
             }
           })
        });
